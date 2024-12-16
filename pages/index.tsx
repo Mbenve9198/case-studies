@@ -123,7 +123,7 @@ export default function CaseStudies() {
       <div className="relative -mt-32 mb-12">
         <div className="absolute inset-0 flex items-center justify-center">
           <svg 
-            className="w-full max-w-5xl hidden sm:block" 
+            className="w-full max-w-5xl"
             height="250" 
             viewBox="0 0 1000 250" 
             preserveAspectRatio="none"
@@ -234,7 +234,7 @@ export default function CaseStudies() {
       </div>
 
       {/* Case Study Navigation Bottom */}
-      <div className="relative max-w-6xl mx-auto px-4 mb-24">
+      <div className="relative max-w-6xl mx-auto px-4 mb-16">
         {/* Curved line connector */}
         <div className="absolute inset-0 flex items-center justify-center">
           <svg 
@@ -270,11 +270,11 @@ export default function CaseStudies() {
         </div>
 
         {/* Bottom Navigation Buttons */}
-        <div className="relative flex flex-col sm:flex-row justify-between max-w-4xl mx-auto px-8">
+        <div className="relative flex flex-col sm:flex-row justify-between max-w-4xl mx-auto px-8 -mt-8">
           {cases.map((caseStudy, index) => (
             <motion.div
               key={`bottom-${caseStudy.id}`}
-              className={`flex flex-col items-center mb-8 sm:mb-0 ${
+              className={`flex flex-col items-center mb-6 sm:mb-0 ${
                 index === 1 ? 'sm:mt-32' : index === 2 ? 'sm:mt-8' : 'sm:mt-16'
               }`}
               animate={{ y: [0, -10, 0] }}
