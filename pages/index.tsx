@@ -24,7 +24,7 @@ const cases = [
       date: "Dicembre 2024",
       rating: 4.8,
       reviews: 1793,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2012.15.32-3DydtgqXabEpdmPFuIajCtZvYluuBh.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2012.55.00-6RxNjVR5morxprZPTsFYxK95yU1Umw.png",
       price: "€20-30",
       type: "Restaurant"
     },
@@ -71,7 +71,7 @@ const cases = [
       date: "Maggio 2023",
       rating: 4.5,
       reviews: 700,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/arnolds-before-2Js4Xe5Js2Js4Xe5Js.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2012.54.48-RCcojuWMyaDN5s2CVXu6f1yCycAXtd.png",
       status: "Aperto",
       price: "€20-30",
       type: "Ristorante"
@@ -80,7 +80,7 @@ const cases = [
       date: "Dicembre 2023",
       rating: 4.7,
       reviews: 2129,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/arnolds-after-6Ls8Ye7Ls6Ls8Ye7Ls.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2013.59.19-iuJM3TEeP5pjaNPUw9AYZ28B46Sdrw.png",
       price: "€20-30",
       type: "Ristorante"
     },
@@ -234,26 +234,75 @@ export default function CaseStudies() {
       </div>
 
       {/* Case Study Navigation Bottom */}
-      <div className="max-w-6xl mx-auto px-4 mb-24">
-        <div className="flex flex-wrap justify-center gap-4">
-          {cases.map((caseStudy) => (
-            <Button
+      <div className="relative max-w-6xl mx-auto px-4 mb-24">
+        {/* Curved line connector */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <svg 
+            className="w-full max-w-5xl hidden sm:block" 
+            height="250" 
+            viewBox="0 0 1000 250" 
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,125 C250,225 750,25 1000,125"
+              fill="none"
+              stroke="url(#bottomLineGradient)"
+              strokeWidth="4"
+              className="opacity-20"
+            />
+            <path
+              d="M0,125 C250,225 750,25 1000,125"
+              fill="none"
+              stroke="url(#bottomLineGradient)"
+              strokeWidth="4"
+              strokeDasharray="2000"
+              strokeDashoffset="2000"
+              className="animate-drawLine"
+            />
+            <defs>
+              <linearGradient id="bottomLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#FF6B6B" />
+                <stop offset="50%" stopColor="#4834D4" />
+                <stop offset="100%" stopColor="#686DE0" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        {/* Bottom Navigation Buttons */}
+        <div className="relative flex flex-col sm:flex-row justify-between max-w-4xl mx-auto px-8">
+          {cases.map((caseStudy, index) => (
+            <motion.div
               key={`bottom-${caseStudy.id}`}
-              onClick={() => setSelectedCase(caseStudy)}
-              variant="outline"
-              className={`
-                px-6 py-2 text-sm sm:text-base rounded-full transition-all duration-300 transform hover:scale-105
-                ${selectedCase.id === caseStudy.id 
-                  ? 'bg-white text-blue-600 shadow-lg border-blue-200 hover:border-blue-300' 
-                  : 'bg-white hover:bg-gray-50 text-gray-600'
-                }
-              `}
+              className={`flex flex-col items-center mb-8 sm:mb-0 ${
+                index === 1 ? 'sm:mt-32' : index === 2 ? 'sm:mt-8' : 'sm:mt-16'
+              }`}
+              animate={{ y: [0, -10, 0] }}
+              transition={{ 
+                repeat: Infinity, 
+                duration: 4,
+                ease: "easeInOut",
+                delay: index * 0.2 
+              }}
             >
-              {caseStudy.name}
-              <div className="text-xs sm:text-sm text-gray-500 ml-2">
-                +{caseStudy.metrics.reviewsIncrease} recensioni
+              <Button
+                onClick={() => setSelectedCase(caseStudy)}
+                variant="outline"
+                className={`
+                  relative px-8 py-3 text-lg rounded-full transition-all duration-300 transform hover:scale-105
+                  ${selectedCase.id === caseStudy.id 
+                    ? 'bg-white text-blue-600 shadow-lg border-blue-200 hover:border-blue-300' 
+                    : 'bg-white hover:bg-gray-50 text-gray-600'
+                  }
+                `}
+              >
+                {caseStudy.name}
+              </Button>
+              <div className="mt-2 flex items-center text-sm font-medium text-gray-500">
+                <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                <span>+{caseStudy.metrics.reviewsIncrease} recensioni</span>
               </div>
-            </Button>
+            </motion.div>
           ))}
         </div>
       </div>
