@@ -24,11 +24,11 @@ const cases = [
       date: "Dicembre 2024",
       rating: 4.8,
       reviews: 1793,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2012.55.00-6RxNjVR5morxprZPTsFYxK95yU1Umw.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2012.15.32-3DydtgqXabEpdmPFuIajCtZvYluuBh.png",
       price: "€20-30",
       type: "Restaurant"
     },
-    mapsUrl: "https://maps.app.goo.gl/N875ctbiEH9kzPHM9",
+    mapsUrl: "https://maps.app.goo.gl/N875ctbiEH9kzPHM9?g_st=com.google.maps.preview.copy",
     metrics: {
       ratingIncrease: 0.2,
       reviewsIncrease: 1485,
@@ -41,22 +41,22 @@ const cases = [
     title: "Il Porto triplica le recensioni in 16 mesi",
     before: {
       date: "Agosto 2023",
-      rating: 4.6,
-      reviews: 1107,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/porto-before-4Hs0Ue7Hs4Hs0Ue7Hs.png",
+      rating: 4.3,
+      reviews: 1108,
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2012.54.48-RCcojuWMyaDN5s2CVXu6f1yCycAXtd.png",
       status: "Aperto",
-      price: "€20-30",
-      type: "Ristorante"
+      price: "€€",
+      type: "Ristorante di pesce"
     },
     after: {
       date: "Dicembre 2024",
-      rating: 4.8,
-      reviews: 3725,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/porto-after-8Ks2We9Ks8Ks2We9Ks.png",
-      price: "€20-30",
-      type: "Ristorante"
+      rating: 4.5,
+      reviews: 3726,
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2012.55.00-6RxNjVR5morxprZPTsFYxK95yU1Umw.png",
+      price: "€€",
+      type: "Seafood restaurant"
     },
-    mapsUrl: "https://maps.app.goo.gl/wXZ4fn3f5tVmPq9B6",
+    mapsUrl: "https://maps.app.goo.gl/wXZ4fn3f5tVmPq9B6?g_st=com.google.maps.preview.copy",
     metrics: {
       ratingIncrease: 0.2,
       reviewsIncrease: 2618,
@@ -66,25 +66,25 @@ const cases = [
   {
     id: "arnolds",
     name: "Arnold's",
-    title: "Arnold's aumenta le recensioni del 312% in 7 mesi",
+    title: "Arnold's aumenta le recensioni del 204% in 19 mesi",
     before: {
       date: "Maggio 2023",
       rating: 4.5,
       reviews: 700,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2012.54.48-RCcojuWMyaDN5s2CVXu6f1yCycAXtd.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2013.58.58-syIthykSXRdfM9T9NearLXgAS2hdNx.png",
       status: "Aperto",
-      price: "€20-30",
-      type: "Ristorante"
+      price: "€€",
+      type: "Fast food"
     },
     after: {
-      date: "Dicembre 2023",
+      date: "Dicembre 2024",
       rating: 4.7,
       reviews: 2129,
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2013.59.19-iuJM3TEeP5pjaNPUw9AYZ28B46Sdrw.png",
-      price: "€20-30",
-      type: "Ristorante"
+      price: "10-20 €",
+      type: "Hamburger"
     },
-    mapsUrl: "https://maps.app.goo.gl/wXZ4fn3f5tVmPq9B6",
+    mapsUrl: "https://maps.app.goo.gl/zwaJuFkhdp4TFGoy7?g_st=com.google.maps.preview.copy",
     metrics: {
       ratingIncrease: 0.2,
       reviewsIncrease: 1429,
