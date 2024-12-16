@@ -43,7 +43,7 @@ const cases = [
       date: "Agosto 2023",
       rating: 4.6,
       reviews: 1107,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2012.15.32-3DydtgqXabEpdmPFuIajCtZvYluuBh.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/porto-before-4Hs0Ue7Hs4Hs0Ue7Hs.png",
       status: "Aperto",
       price: "€20-30",
       type: "Ristorante"
@@ -52,7 +52,7 @@ const cases = [
       date: "Dicembre 2024",
       rating: 4.8,
       reviews: 3725,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2012.15.32-3DydtgqXabEpdmPFuIajCtZvYluuBh.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/porto-after-8Ks2We9Ks8Ks2We9Ks.png",
       price: "€20-30",
       type: "Ristorante"
     },
@@ -70,8 +70,8 @@ const cases = [
     before: {
       date: "Maggio 2023",
       rating: 4.5,
-      reviews: 89,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2013.58.58-syIthykSXRdfM9T9NearLXgAS2hdNx.png",
+      reviews: 700,
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/arnolds-before-2Js4Xe5Js2Js4Xe5Js.png",
       status: "Aperto",
       price: "€20-30",
       type: "Ristorante"
@@ -79,16 +79,16 @@ const cases = [
     after: {
       date: "Dicembre 2023",
       rating: 4.7,
-      reviews: 367,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-12-16%20alle%2013.58.58-syIthykSXRdfM9T9NearLXgAS2hdNx.png",
+      reviews: 2129,
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/arnolds-after-6Ls8Ye7Ls6Ls8Ye7Ls.png",
       price: "€20-30",
       type: "Ristorante"
     },
     mapsUrl: "https://maps.app.goo.gl/wXZ4fn3f5tVmPq9B6",
     metrics: {
       ratingIncrease: 0.2,
-      reviewsIncrease: 278,
-      growthPercentage: 312
+      reviewsIncrease: 1429,
+      growthPercentage: 204
     }
   }
 ]
