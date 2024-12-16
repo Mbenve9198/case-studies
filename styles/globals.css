@@ -21,3 +21,20 @@
   animation: float 4s ease-in-out infinite;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+}
+
+.bg-gradient-primary {
+  @apply bg-gradient-to-r from-blue-600 to-indigo-700;
+}
+
+.hover-scale {
+  @apply transform transition-transform duration-300 hover:scale-105;
+}
+

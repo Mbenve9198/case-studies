@@ -1,3 +1,4 @@
+import '@/styles/globals.css'
 import { CaseStudy } from "@/components/case-study"
 import { Button } from "@/components/ui/button"
 import { MessageCircle, ArrowRight, Star } from 'lucide-react'
