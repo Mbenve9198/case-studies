@@ -122,7 +122,12 @@ export default function CaseStudies() {
       {/* Curved line connector with labels */}
       <div className="relative -mt-32 mb-12">
         <div className="absolute inset-0 flex items-center justify-center">
-          <svg className="w-full max-w-5xl" height="250" viewBox="0 0 1000 250" preserveAspectRatio="none">
+          <svg 
+            className="w-full max-w-5xl hidden sm:block" 
+            height="250" 
+            viewBox="0 0 1000 250" 
+            preserveAspectRatio="none"
+          >
             <path
               d="M0,125 C250,225 750,25 1000,125"
               fill="none"
@@ -150,12 +155,12 @@ export default function CaseStudies() {
         </div>
 
         {/* Case Study Buttons */}
-        <div className="relative flex justify-between max-w-4xl mx-auto px-8">
+        <div className="relative flex flex-col sm:flex-row justify-between max-w-4xl mx-auto px-4 sm:px-8">
           {cases.map((caseStudy, index) => (
             <motion.div
               key={caseStudy.id}
-              className={`flex flex-col items-center ${
-                index === 1 ? 'mt-32' : index === 2 ? 'mt-8' : 'mt-16'
+              className={`flex flex-col items-center mb-8 sm:mb-0 ${
+                index === 1 ? 'sm:mt-32' : index === 2 ? 'sm:mt-8' : 'sm:mt-16'
               }`}
               animate={{ y: [0, -10, 0] }}
               transition={{ 
@@ -169,19 +174,21 @@ export default function CaseStudies() {
                 onClick={() => setSelectedCase(caseStudy)}
                 variant="outline"
                 className={`
-                  relative px-8 py-3 text-lg rounded-full transition-all duration-300 transform hover:scale-105
+                  whitespace-nowrap px-4 sm:px-8 py-2 sm:py-3 text-sm sm:text-lg rounded-full 
+                  transition-all duration-300 transform hover:scale-105 w-auto
                   ${selectedCase.id === caseStudy.id 
                     ? 'bg-white text-blue-600 shadow-lg border-blue-200 hover:border-blue-300' 
                     : 'bg-white hover:bg-gray-50 text-gray-600'
                   }
                 `}
               >
-                {caseStudy.name}
+                <span className="flex items-center gap-2">
+                  {caseStudy.name}
+                  <span className="text-xs sm:text-sm text-gray-500">
+                    +{caseStudy.metrics.reviewsIncrease}
+                  </span>
+                </span>
               </Button>
-              <div className="mt-2 flex items-center text-sm font-medium text-gray-500">
-                <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                <span>+{caseStudy.metrics.reviewsIncrease} recensioni</span>
-              </div>
             </motion.div>
           ))}
         </div>
@@ -224,6 +231,31 @@ export default function CaseStudies() {
             </div>
           </motion.div>
         </AnimatePresence>
+      </div>
+
+      {/* Case Study Navigation Bottom */}
+      <div className="max-w-6xl mx-auto px-4 mb-24">
+        <div className="flex flex-wrap justify-center gap-4">
+          {cases.map((caseStudy) => (
+            <Button
+              key={`bottom-${caseStudy.id}`}
+              onClick={() => setSelectedCase(caseStudy)}
+              variant="outline"
+              className={`
+                px-6 py-2 text-sm sm:text-base rounded-full transition-all duration-300 transform hover:scale-105
+                ${selectedCase.id === caseStudy.id 
+                  ? 'bg-white text-blue-600 shadow-lg border-blue-200 hover:border-blue-300' 
+                  : 'bg-white hover:bg-gray-50 text-gray-600'
+                }
+              `}
+            >
+              {caseStudy.name}
+              <div className="text-xs sm:text-sm text-gray-500 ml-2">
+                +{caseStudy.metrics.reviewsIncrease} recensioni
+              </div>
+            </Button>
+          ))}
+        </div>
       </div>
 
       {/* Call to Action (fixed) */}
