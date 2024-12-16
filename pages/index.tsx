@@ -195,7 +195,7 @@ export default function CaseStudies() {
       </div>
 
       {/* Case Study Content */}
-      <div className="max-w-6xl mx-auto px-4 pt-4 pb-32 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 pt-4 pb-24 sm:pb-32 sm:px-6 lg:px-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedCase.id}
@@ -234,7 +234,7 @@ export default function CaseStudies() {
       </div>
 
       {/* Case Study Navigation Bottom */}
-      <div className="relative max-w-6xl mx-auto px-4 mb-16">
+      <div className="relative max-w-6xl mx-auto px-4 mb-24 sm:mb-16">
         {/* Curved line connector */}
         <div className="absolute inset-0 flex items-center justify-center">
           <svg 
@@ -270,11 +270,11 @@ export default function CaseStudies() {
         </div>
 
         {/* Bottom Navigation Buttons */}
-        <div className="relative flex flex-col sm:flex-row justify-between max-w-4xl mx-auto px-8 -mt-8">
+        <div className="relative flex flex-col sm:flex-row justify-between max-w-4xl mx-auto px-8 -mt-12">
           {cases.map((caseStudy, index) => (
             <motion.div
               key={`bottom-${caseStudy.id}`}
-              className={`flex flex-col items-center mb-6 sm:mb-0 ${
+              className={`flex flex-col items-center mb-4 sm:mb-0 ${
                 index === 1 ? 'sm:mt-32' : index === 2 ? 'sm:mt-8' : 'sm:mt-16'
               }`}
               animate={{ y: [0, -10, 0] }}
