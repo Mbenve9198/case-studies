@@ -113,7 +113,7 @@ export default function CaseStudies() {
               Storie di Successo
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Scopri come abbiamo aiutato questi ristoranti a migliorare la loro presenza su Google Maps
+              Scopri come abbiamo aiutato questi ristoranti a raccogliere 100 recensioni al mese
             </p>
           </div>
         </div>
@@ -238,7 +238,7 @@ export default function CaseStudies() {
         {/* Curved line connector */}
         <div className="absolute inset-0 flex items-center justify-center">
           <svg 
-            className="w-full max-w-5xl hidden sm:block" 
+            className="w-full max-w-5xl" 
             height="250" 
             viewBox="0 0 1000 250" 
             preserveAspectRatio="none"
@@ -312,7 +312,7 @@ export default function CaseStudies() {
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-white">
             <h2 className="text-2xl font-bold">Vuoi provarlo gratis anche tu?</h2>
-            <p className="text-lg">Scopri come possiamo trasformare la tua presenza online!</p>
+            <p className="text-lg">Scopri come raccogliere 100 recensioni al mese!</p>
           </div>
           <Link 
             href="https://wa.me/393342746427?text=Ciao%20sono%20interessato%20a%20provare%20il%20vostro%20servizio%20di%20raccolta%20recensioni"
